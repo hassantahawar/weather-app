@@ -8,7 +8,7 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(body.message){
             callback('Invalid Input LOCATION', undefined)
         }else{
-            callback(undefined,"Current Temperature: " + body.list[0].main.temp)
+            callback(undefined,"Current Temperature: " + body.list[0].main.temp + ".Feels like" + body.list[0].main.feels_like)
         }
     })
 }
